@@ -9,9 +9,9 @@ Use Google Takeout to get a zip file, which will contain your Keep notes
 
 Usage:
 
-  simple usage: `keepToText.py zipFile`
+  simple usage: `python keepToText.py zipFile`
   
-  full usage: `keepToText.py [-h] [--encoding ENCODING] [--system-encoding]
+  full usage: `python keepToText.py [-h] [--encoding ENCODING] [--system-encoding]
                      [--format {Evernote,CintaNotes}]
                      zipFile`
 

@@ -36,6 +36,8 @@ Works with Python 2 or 3
   The default format is Evernote
   
   Use the `--label` option to create an ouput directory containing only notes with the specified label
+  
+  Limited to one label for now
     
 **Module dependencies**:
 

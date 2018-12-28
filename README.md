@@ -34,6 +34,8 @@ Works with Python 2 or 3
   Use the `--format` option to choose between Evernote and CintaNotes, for example, `--format CintaNotes`
   
   The default format is Evernote
+  
+  Use the `--label` option to create an ouput directory containing only notes with the specified label
     
 **Module dependencies**:
 

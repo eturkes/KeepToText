@@ -15,10 +15,17 @@ def htmlFileToText(inputPath, outputDir, tag, attrib, attribVal):
     basename = os.path.basename(inputPath).replace(".html", ".txt")
     outfname = os.path.join(outputDir, basename)
     try:
-        with codecs.open(inputPath, "r", "utf-8") as inf, codecs.open(outfname, "w", outputEncoding) as outf:
+        with codecs.open(inputPath, "r", "utf-8") as inf:
             html = inf.read()
-            parser = MyHTMLParser(outf, tag, attrib, attribVal)
-            parser.feed(html)
+            if args.label == None:
+                with codecs.open(outfname, "w", outputEncoding) as outf:
+                    parser = MyHTMLParser(outf, tag, attrib, attribVal)
+                    parser.feed(html)
+            else:
+                if '"label-name">' + args.label in html:
+                    with codecs.open(outfname, "w", outputEncoding) as outf:
+                        parser = MyHTMLParser(outf, tag, attrib, attribVal)
+                        parser.feed(html)
     except UnicodeEncodeError as ex:
         msg("Skipping file " + inputPath + ": " + str(ex))
     except LookupError as ex:
@@ -196,6 +203,8 @@ def getArgs():
         help="use the system encoding for the output")
     parser.add_argument("--format", choices=["Evernote", "CintaNotes"],
         default='Evernote', help="Output Format")
+    parser.add_argument("--label",
+        help="output only consists of notes with a specified label")
     global args
     args = parser.parse_args()    
 

@@ -1,4 +1,7 @@
 # KeepToText
+#### *This project is deployable but not feature complete*
+
+### This is a hard fork of KeepToText as [upstream](https://github.com/HardFork/KeepToText) appears to be unmaintained
 
 Convert a Google Takeout zip file containing Google Keep notes to a
 directory of text files, suitable for import into systems such as Evernote

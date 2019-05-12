@@ -1,5 +1,5 @@
 # KeepToText
-#### *This project is usable but not feature complete*
+#### *This project contains stable releases with ongoing feature updates*
 
 ### This is a hard fork of KeepToText as [upstream](https://github.com/HardFork/KeepToText) appears to be unmaintained
 
